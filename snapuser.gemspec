@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rails", "~> 4.2.1"
   spec.add_dependency "bcrypt-ruby", "~> 3.1.0"
+  spec.add_dependency "snaptable"
 
   spec.add_development_dependency "sqlite3"
 end

@@ -8,6 +8,5 @@ module Snapuser
         end
       end
     end
-
   end
 end
