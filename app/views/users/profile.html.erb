@@ -1,0 +1,20 @@
+<% content_for :id, "profil" %>
+
+<h1><%= t('user.index') %></h1>
+
+<%= link_to t('user.edit.title'), user_edit_path if authorize_level?(2) %>
+
+<div class="links">
+	<%= link_to_active "Home", root_path %>
+	<%= link_to_active t('user.index'), profile_path %>
+	<%= link_to_active t('layout.header.messages'), messages_path %>
+	<%= link_to_active t('layout.header.admin.files'), admin_files_path if authorize_level?(3) %>
+	<%= link_to_active t('layout.header.admin.pages'), admin_pages_path if authorize_level?(2) %>
+	<%= link_to_active t('layout.header.admin.events'), admin_events_path if authorize_level?(2) %>
+	<%= link_to_active t('layout.header.admin.activities'), admin_activities_path if authorize_level?(2) %>
+	<%= link_to_active t('layout.header.admin.galleries'), admin_galleries_path if authorize_level?(2) %>
+	<%= link_to_active t('layout.header.admin.messages'), admin_messages_path if authorize_level?(4) %>
+	<%= link_to_active t('layout.header.admin.newsletter_emails'), admin_newsletter_emails_path if authorize_level?(2) %>
+	<%= link_to_active t('layout.header.admin.downloads'), admin_downloads_path if authorize_level?(2) %>
+	<%= link_to_active t('layout.header.admin.users'), admin_users_path if authorize_level?(1) %>
+</div>

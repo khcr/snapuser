@@ -1,0 +1,25 @@
+<%= form_for @user, url: user_update_path do |f| %>
+
+	<%= render 'error_messages', object: f.object %>
+	<ul class="form">
+		<li>
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+		</li>
+		<li>
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+		</li>
+		<li>
+			<%= f.label :password_confirmation %>
+			<%= f.password_field :password_confirmation %>
+		</li>
+	<ul>
+	<div id="clear"></div>
+
+	<ul class="center">
+		<li>
+			<%= f.submit %>
+		</li>
+	</ul>
+<% end %>

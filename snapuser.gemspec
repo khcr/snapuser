@@ -9,14 +9,15 @@ Gem::Specification.new do |spec|
   spec.version     = Snapuser::VERSION
   spec.authors     = ["khcr"]
   spec.email       = ["kocher.ke@gmail.com"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of Snapuser."
-  spec.description = "TODO: Description of Snapuser."
+  spec.homepage    = "https://github.com/khcr/snapuser"
+  spec.summary     = "A rails engine to add a simple authentification and permission system."
+  spec.description = spec.summary
   spec.license     = "MIT"
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   spec.add_dependency "rails", "~> 4.2.1"
+  spec.add_dependency "bcrypt-ruby", "~> 3.1.0"
 
   spec.add_development_dependency "sqlite3"
 end
