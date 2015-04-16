@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'profile', to: "users#profile"
-
   patch 'user/update', to: "users#update"
   get 'user/edit', to: "users#edit"
   

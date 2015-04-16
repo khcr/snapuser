@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
-  before_action except: [:profile] { |c| c.authorize_level(2) }
-  before_action only: [:profile] { |c| c.authorize_level(4) }
+  before_action { |c| c.authorize_level(Snapuser.can_edit) }
   layout 'admin'
-
-  def profile
-  end
 
   def edit
     @user = current_user
@@ -14,7 +10,7 @@ class UsersController < ApplicationController
     @user = current_user
     if @user.update_attributes(user_params)
       sign_in @user
-      redirect_to profile_path, success: t('user.edit.success')
+      redirect_to profile_path, success: t('snapuser.edit.success')
     else
       render 'new'
     end

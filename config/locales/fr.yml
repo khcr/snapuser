@@ -1,0 +1,40 @@
+fr:
+  snapuser:
+    admin:
+      index:
+        title: "Les utilisateurs"
+      edit:
+        title: "Editer un utilisateur"
+        success: "Utilisateur enregistré"
+      new:
+        title: "Ajouter un utilisateur"
+        success: "Utilisateur crée"
+    edit:
+      title: "Editer mon compte"
+      success: "Compte mis à jour"
+    destroy:
+      success: "Utilisateur supprimé"
+    errors:
+      unauthorized: "Non autorisé"
+      unconnected: "Veuillez vous connecter"
+    session:
+      success: "Connecté !"
+      error: "Mot de passe ou/et nom d'utilisateur invalide !"
+      destroy:
+        success: "Déconnecté !"
+  activerecord:
+    attributes:
+      user:
+        name: "Nom d'utilisateur"
+        password: "Mot de passe"
+        password_confirmation: "Confirmation du mot de passe"
+  helpers:
+    submit:
+      user:
+        create: "S'inscrire"
+        update: "Mettre à jour"
+    label:
+      session:
+        name: "Nom d'utilisateur"
+        remember_me: "Se souvenir de moi"
+        password: "Mot de passe"

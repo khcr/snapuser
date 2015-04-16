@@ -6,21 +6,10 @@ module SessionsHelper
 	# 	- a user to sign in
 	# * *Returns*	:
 	#
-	def sign_in(user)
-		cookies[:remember_token] = user.remember_token
-		self.current_user = user
-	end
-
-	# Sign in a user with a cookie (remove after 2 months)
-	# 
-	# * *Args*		:
-	# 	- a user to sign in
-	# * *Returns*	:
-	#
-	def sign_in_permanent(user)
-		cookies[:remember_token] = { value: user.remember_token, expires: Time.now + 2592000 }
-		self.current_user = user
-	end
+	def sign_in(user, permanent: false)
+    cookies[:remember_token] = { value: user.remember_token, expires: (Time.now + 2592000 if permanent) }
+    self.current_user = user
+  end
 
 	def current_user=(user)
 		@current_user = user
@@ -70,15 +59,19 @@ module SessionsHelper
     session.delete(:return_to)
   end
 
-  def authorize_level?(level = 3)
+  def authorize_level?(level)
     current_user && current_user.level <= level
   end
 
-  def authorize_level(level = 3)
+  def authorize_level(level)
     unless authorize_level?(level)
       store_location
-      redirect_to login_path, error: "Pas autorisé"
+      redirect_to login_path, error: t("snapuser.errors.unauthorized")
     end
+  end
+
+  def require_login
+    redirect_to login_path, error: t("snapuser.errors.unconnected") unless signed_in?
   end
 
 end
