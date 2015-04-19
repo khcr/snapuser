@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    snapuser (0.1.1)
+    snapuser (0.2.0)
       bcrypt-ruby (~> 3.1.0)
       rails (~> 4.2.1)
       snaptable

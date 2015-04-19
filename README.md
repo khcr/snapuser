@@ -64,7 +64,7 @@ You can configure the different permission's levels. Set `Snapuser.levels` with 
 ```ruby
 # initializers/snapuser.rb
 
-Snapuser.levels = {"superadmin" => "1", "admin" => "2", "leader" => "3", "uploader" => "4", "member" => "5"}
+Snapuser.levels = {"superadmin" => "1", "admin" => "2", "author" => "3", "member" => "4"}
 ```
 By default, the levels are `{"superadmin" => "1", "admin" => "2"}`.
 

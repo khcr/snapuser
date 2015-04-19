@@ -8,5 +8,9 @@ module Snapuser
         end
       end
     end
+
+    initializer 'Snapuser.action_controller' do |app|
+      ActionController::Base.send :include, SessionsHelper
+    end
   end
 end
