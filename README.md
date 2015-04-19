@@ -55,6 +55,15 @@ The plugin also provides few methods that can be useful:
 * `current_user`: return the connected user, or otherwise `nil`
 * `signed_in?`: check if a user is connected
 
+The following URL are reserved by the plugin:
+
+* `/login`, login_path
+* `/user/edit`, user_edit_path
+* `/user/update`, user_update_path
+* `/signout`, signout_path
+* `/sessions`, sessions_path
+* resources `/admin/users`, admin_users_path
+
 ## Configuration
 
 Create an custom initializer to put your configuration.
@@ -70,4 +79,8 @@ By default, the levels are `{"superadmin" => "1", "admin" => "2"}`.
 
 Set `Snapuser.superuser_level` to configure from which level the users are allowed to edit the other users. By default, the superuser level is 1.
 
-Set `Snaperuser.can_edit` to configure from which level a user is allowed to edit his information (username and password).
+Set `Snapuser.can_edit` to configure from which level a user is allowed to edit his information (username and password).
+
+Set `Snapuser.redirect_url` to configure where the user is redirected after a successful login. By default, "/profile".
+
+Set `Snapuser.layout` to configure which layout is used in the admin views, when you edit a user for instance. By default, "admin".

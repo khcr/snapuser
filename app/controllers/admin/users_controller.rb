@@ -1,6 +1,6 @@
 class Admin::UsersController < ApplicationController
 	before_action { |c| c.authorize_level(Snapuser.superuser_level) }
-	layout 'admin'
+	layout Snapuser.layout
 
 	def index
 		@table = Table.new(self, User)

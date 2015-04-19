@@ -23,7 +23,7 @@ class SessionsController < ApplicationController
 	private
 
 	def redirect_if_connected
-		redirect_to profile_path unless current_user.nil?
+		redirect_to Snapuser.redirect_url unless current_user.nil?
 	end
 
 end

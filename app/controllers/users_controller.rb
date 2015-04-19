@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action { |c| c.authorize_level(Snapuser.can_edit) }
-  layout 'admin'
+  layout Snapuser.layout
 
   def edit
     @user = current_user
