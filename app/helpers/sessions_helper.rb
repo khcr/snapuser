@@ -1,7 +1,7 @@
 module SessionsHelper
 
 	# Sign in a user with a cookie (remove on browser close)
-	# 
+	#
 	# * *Args*		:
 	# 	- a user to sign in
 	# * *Returns*	:
@@ -16,7 +16,7 @@ module SessionsHelper
 	end
 
 	# Provid the user currently signed in.
-	# 
+	#
 	# * *Returns*	:
 	# 	- the user currently signed in
 	def current_user
@@ -25,7 +25,7 @@ module SessionsHelper
 
 
 	# Check if there is a user signed in.
-	# 
+	#
 	# * *Returns*	:
 	# 	- true or false
 	def signed_in?
@@ -39,9 +39,9 @@ module SessionsHelper
 	end
 
 	# Store the current url in session's variable
-  # 
+  #
   # * *Args*    :
-  # 
+  #
   # * *Returns* :
   #
   def store_location
@@ -49,7 +49,7 @@ module SessionsHelper
   end
 
   # Redirect the user to the stored url or the default one provided
-  # 
+  #
   # * *Args*    :
   #   - default path to redirect to
   # * *Returns* :
