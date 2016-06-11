@@ -9,11 +9,11 @@ fr:
       new:
         title: "Ajouter un utilisateur"
         success: "Utilisateur crée"
+      destroy:
+        success: "Utilisateur supprimé"
     edit:
       title: "Editer mon compte"
       success: "Compte mis à jour"
-    destroy:
-      success: "Utilisateur supprimé"
     errors:
       unauthorized: "Non autorisé"
       unconnected: "Veuillez vous connecter"

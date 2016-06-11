@@ -35,7 +35,7 @@ class Admin::UsersController < ApplicationController
 
 	def destroy
 		User.find(params[:id]).destroy
-		redirect_to admin_activities_path, success: t('snapuser.admin.destroy.success')
+		redirect_to admin_users_path, success: t('snapuser.admin.destroy.success')
 	end
 
 	private
